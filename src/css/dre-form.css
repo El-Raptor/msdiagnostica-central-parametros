@@ -1,0 +1,131 @@
+:root {
+  --surface: #ffffff;
+  --primary: #2ba12b;
+  --label: #878787;
+  --border: #c4cbd8;
+  --border-lit: #cbd5e1;
+  --text: #2e3c50;
+  --muted: #64748b;
+  --accent: #2ba12b;
+  --primary-dark: #1c711c;
+  --accent-dim: #ddf7dd;
+  --line-bg: #f9fbfe;
+  --mono: "Roboto Mono", monospace;
+}
+
+.new-group-header h2 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.dre-section,
+.content,
+.dre-form-section {
+  width: 100%;
+}
+.new-group-header {
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+}
+
+.dre-fields-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.field-group-wrap,
+.field-calc-wrap,
+.field-order-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 26px;
+}
+
+.field-group-wrap label,
+.field-calc-wrap label,
+.field-order-wrap label {
+  color: var(--label);
+  font-size: 16px;
+}
+
+.field-group-wrap input,
+.field-order-wrap input {
+  padding: 10px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 16px;
+  color: var(--muted);
+  border-radius: 15px;
+}
+
+.calc-input {
+  height: 100%;
+  padding: 3px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 16px;
+  color: var(--muted);
+  border-radius: 15px;
+}
+
+.calc-input input { width: 80%; }
+
+.field-calc-wrap input {
+    outline: none;
+    border: none;
+}
+
+.btn-search-calc {
+    background-color: transparent;
+    color: var(--label);
+    font-size: 16px;
+    height: 100%;
+    width: 36px;
+    border: none;
+    border-radius: 12px;
+}
+
+.btn-search-calc:hover{
+    background-color: var(--accent-dim);
+    color: var(--accent);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.calc-n-order-fields {
+    display: flex;
+    gap: 16px;
+}
+
+.field-calc-wrap {
+    width: 90%;
+}
+
+.field-order-wrap {
+    width: 10%;
+}
+
+.submit-container {
+    display: flex;
+    margin-top: 35px;
+}
+
+.btn-save {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 11px 54px;
+    font-size: 16px;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-save:hover {
+    color: #66cc66;
+    border: 1px solid #66cc66;
+}

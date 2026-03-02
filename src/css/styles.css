@@ -1,0 +1,287 @@
+:root {
+  --surface: #ffffff;
+  --primary: #2ba12b;
+  --label: #878787;
+  --border: #c4cbd8;
+  --border-lit: #cbd5e1;
+  --text: #2e3c50;
+  --muted: #64748b;
+  --accent: #2ba12b;
+  --primary-dark: #1c711c;
+  --accent-dim: #ddf7dd;
+  --mono: "Roboto Mono", monospace;
+}
+
+body {
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 83px 78px;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+}
+
+.content-header h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.fields-container {
+  display: flex;
+  gap: 55px;
+  margin-top: 20px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field-group label {
+  margin-left: 3px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: var(--mono);
+}
+
+/* CATEGORY INPUTS */
+.category-inputs {
+  display: flex;
+  gap: 6px;
+}
+
+.category-code-wrap {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  gap: 5px;
+  width: 85px;
+  border: 1px solid var(--border);
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  font-family: var(--mono);
+}
+
+.btn-search-category {
+  color: var(--label);
+  background-color: var(--surface);
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  padding: 6px 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-search-category:hover {
+  background-color: var(--accent-dim);
+  cursor: pointer;
+}
+
+#codnat {
+  width: 100%;
+  color: var(--label);
+  font-size: 15px;
+  font-family: var(--mono);
+  border: none;
+  outline: none;
+}
+
+#codnat:focus {
+  box-shadow: 0 0 0 0px;
+  .category-wrap {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
+  }
+}
+
+#codnat:focus .category-code-wrap {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.category-name-wrap {
+  display: flex;
+  padding: 3px;
+  justify-content: space-between;
+  width: 400px;
+  border: 1px solid var(--border);
+  border-radius: 0 10px 10px 0;
+}
+
+#descrnat {
+  font-size: 15px;
+  width: 80%;
+  color: var(--label);
+  font-family: var(--mono);
+  border: none;
+  outline: none;
+}
+
+#decrnat:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+  outline: none;
+}
+
+.btn-add-category {
+  background-color: var(--accent);
+  color: var(--surface);
+  font-size: 15px;
+  font-family: "Roboto";
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-add-category:hover {
+  cursor: pointer;
+}
+
+.btn-add-category:hover div {
+  animation-duration: 1s;
+  animation-name: rotate;
+}
+
+/* CATEGORY GROUP INPUTS */
+.category-group-inputs {
+  display: flex;
+  gap: 6px;
+}
+
+.category-group-code-wrap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px;
+  width: 85px;
+  border: 1px solid var(--border);
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  font-family: var(--mono);
+}
+
+.btn-search-category-group {
+  color: var(--label);
+  background-color: var(--surface);
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  padding: 6px 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-search-category-group:hover {
+  background-color: var(--accent-dim);
+  cursor: pointer;
+}
+
+#codgrupo {
+  width: 100%;
+  color: var(--label);
+  font-size: 15px;
+  font-family: var(--mono);
+  border: none;
+  outline: none;
+}
+
+#codgrupo:focus {
+  box-shadow: 0 0 0 0px;
+}
+
+#codgrupo:focus .category-group-code-wrap {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.category-group-name-wrap {
+  display: flex;
+  padding: 3px;
+  justify-content: space-between;
+  width: 400px;
+  border: 1px solid var(--border);
+  border-radius: 0 10px 10px 0;
+}
+
+#descrgrupo {
+  font-size: 15px;
+  width: 80%;
+  color: var(--label);
+  font-family: var(--mono);
+  border: none;
+  outline: none;
+}
+
+#decrgrupo:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+  outline: none;
+}
+
+.btn-add-category-group {
+  background-color: var(--accent);
+  color: var(--surface);
+  font-size: 15px;
+  font-family: "Roboto";
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-add-category-group:hover {
+  cursor: pointer;
+}
+.btn-add-category-group:hover div {
+  animation-duration: 1s;
+  animation-name: rotate;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    scale: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    scale: 2;
+  }
+  to {
+    transform: rotate(360deg);
+    scale: 1;
+  }
+}
+
+.dre-section {
+  display: flex;
+  margin-top: 82px;
+  gap: 109px;
+}

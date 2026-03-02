@@ -1,0 +1,130 @@
+:root {
+  --surface: #ffffff;
+  --primary: #2ba12b;
+  --label: #878787;
+  --border: #c4cbd8;
+  --border-lit: #cbd5e1;
+  --text: #2e3c50;
+  --muted: #64748b;
+  --accent: #2ba12b;
+  --primary-dark: #1c711c;
+  --accent-dim: #ddf7dd;
+  --line-bg: #f9fbfe;
+  --mono: "Roboto Mono", monospace;
+}
+
+.table-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 82px;
+}
+
+.category-table-title {
+  font-size: 24px;
+  color: var(--text);
+}
+
+.table-container::-webkit-scrollbar {
+  height: 5px;
+}
+.table-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.table-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+.table-container {
+  padding: 0 20px 18px;
+  overflow-x: auto;
+  max-height: 545px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.category-table {
+  width: 100%;
+  font-size: 16px;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  white-space: nowrap;
+}
+.category-table thead th {
+  padding: 6px 12px;
+  font-size: 16px;
+  font-family: var(--mono);
+  font-weight: normal;
+  letter-spacing: 0.05rem;
+  background-color: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: var(--label);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.category-table tbody tr {
+  transition: background 0.12s;
+}
+
+.category-table tbody tr:hover td {
+  background: #f0faf0;
+  cursor: pointer;
+}
+
+.category-table tbody td {
+  padding: 7px 12px;
+  color: var(--text);
+  background: #f9fbfe;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.category-table tbody td:first-child {
+  background-color: transparent;
+}
+.category-table tbody td:nth-child(2) {
+  border-radius: 10px 0 0 10px;
+}
+.category-table tbody td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+/* ── Alinhamento de células e cabeçalhos ── */
+.category-table .align-left {
+  text-align: left;
+}
+.category-table .align-center {
+  text-align: center;
+}
+.category-table .align-right {
+  text-align: right;
+}
+
+.btn-delete-row {
+  background-color: var(--surface);
+  color: var(--text);
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  font-size: 22px;
+  line-height: 0; /* Centraliza o sinal de menos perfeitamente */
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-delete-row:hover {
+  background-color: #fee2e2; /* Fundo levemente avermelhado */
+  color: #ef4444; /* Ícone vermelho */
+}

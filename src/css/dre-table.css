@@ -1,0 +1,117 @@
+:root {
+  --surface: #ffffff;
+  --primary: #2ba12b;
+  --label: #878787;
+  --border: #c4cbd8;
+  --border-lit: #cbd5e1;
+  --text: #2e3c50;
+  --muted: #64748b;
+  --accent: #2ba12b;
+  --primary-dark: #1c711c;
+  --accent-dim: #ddf7dd;
+  --line-bg: #f9fbfe;
+  --mono: "Roboto Mono", monospace;
+}
+
+.dre-group-table-title {
+  font-size: 24px;
+  color: var(--text);
+}
+
+.table-container {
+  padding: 0 20px 18px;
+  overflow-x: auto;
+  max-height: 545px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.dre-group-table {
+  width: 100%;
+  font-size: 16px;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  white-space: nowrap;
+}
+.dre-group-table thead th {
+  padding: 6px 60px;
+  font-size: 16px;
+  font-family: var(--mono);
+  font-weight: normal;
+  letter-spacing: 0.05rem;
+  background-color: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: var(--label);
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.dre-group-table thead th:first-child,
+.dre-group-table tbody td:first-child {
+  padding: 6px 60px 6px 12px;
+}
+
+.dre-group-table thead th:last-child,
+.dre-group-table tbody td:last-child {
+  padding: 6px;
+}
+
+.dre-group-table tbody tr {
+  transition: background 0.12s;
+}
+
+.dre-group-table tbody tr:hover td {
+  background: #f0faf0;
+  cursor: pointer;
+}
+
+.dre-group-table tbody td {
+  padding: 7px 60px;
+  color: var(--text);
+  background: #f9fbfe;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.dre-group-table tbody td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.dre-group-table tbody td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+/* ── Alinhamento de células e cabeçalhos ── */
+.dre-group-table .align-left {
+  text-align: left;
+}
+.dre-group-table .align-center {
+  text-align: center;
+}
+.dre-group-table .align-right {
+  text-align: right;
+}
+
+.btn-add-dre-group {
+  background-color: #f0faf0;
+  color: #66cc66;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 22px;
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-add-dre-group:hover {
+  background-color: #66cc66;
+  color: white;
+  transform: translateY(-2px);
+}

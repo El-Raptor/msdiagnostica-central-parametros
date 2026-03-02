@@ -1,0 +1,151 @@
+export async function fetchCategories(codgrupo) {
+  const categoriesData = categories();
+  return categoriesData.filter(
+    (category) => parseInt(category.CODGRUPO) === parseInt(codgrupo),
+  );
+}
+
+function categories() {
+  return [
+    {
+      CODGRUPO: "1",
+      CODNAT: "1010100",
+      DESCRNAT: "REVENDA DE MERCADORIA",
+      CODNATPAI: "1010000",
+      DESCRNATPAI: "RECEITAS OPERACIONAIS",
+    },
+    {
+      CODGRUPO: "1",
+      CODNAT: "1010200",
+      DESCRNAT: "SERVIÇOS PRESTADOS",
+      CODNATPAI: "1010000",
+      DESCRNATPAI: "RECEITAS OPERACIONAIS",
+    },
+    {
+      CODGRUPO: "1",
+      CODNAT: "1010300",
+      DESCRNAT: "LOCAÇÃO DE EQUIPAMENTOS",
+      CODNATPAI: "1010000",
+      DESCRNATPAI: "RECEITAS OPERACIONAIS",
+    },
+    {
+      CODGRUPO: "1",
+      CODNAT: "1010400",
+      DESCRNAT: "GASOMETRIA",
+      CODNATPAI: "1010000",
+      DESCRNATPAI: "RECEITAS OPERACIONAIS",
+    },
+    {
+      CODGRUPO: "1",
+      CODNAT: "1020100",
+      DESCRNAT: "RENDIMENTOS FINANCEIROS",
+      CODNATPAI: "1020000",
+      DESCRNATPAI: "RECEITAS NÃO-OPERACIONAIS",
+    },
+    {
+      CODGRUPO: "1",
+      CODNAT: "1020200",
+      DESCRNAT: "VENDA DO ATIVO IMOBILIZADO",
+      CODNATPAI: "1020000",
+      DESCRNATPAI: "RECEITAS NÃO-OPERACIONAIS",
+    },
+    {
+      CODGRUPO: "1",
+      CODNAT: "1020300",
+      DESCRNAT: "RENDIMENTO DE ALUGUÉIS",
+      CODNATPAI: "1020000",
+      DESCRNATPAI: "RECEITAS NÃO-OPERACIONAIS",
+    },
+    {
+      CODGRUPO: "1",
+      CODNAT: "1020400",
+      DESCRNAT: "EMPRÉSTIMO BANCÁRIOS",
+      CODNATPAI: "1020000",
+      DESCRNATPAI: "RECEITAS NÃO-OPERACIONAIS",
+    },
+    {
+      CODGRUPO: "1",
+      CODNAT: "1020501",
+      DESCRNAT: "ADIANTAMENTO A FORNECEDORES",
+      CODNATPAI: "1020500",
+      DESCRNATPAI: "ADIANTAMENTOS RECEBIDOS",
+    },
+    {
+      CODGRUPO: "1",
+      CODNAT: "1020502",
+      DESCRNAT: "ADIANTAMENTO A CLIENTES",
+      CODNATPAI: "1020500",
+      DESCRNATPAI: "ADIANTAMENTOS RECEBIDOS",
+    },
+    {
+      CODGRUPO: "2",
+      CODNAT: "2010400",
+      DESCRNAT: "COMPRAS DE INSUMOS",
+      CODNATPAI: "2010000",
+      DESCRNATPAI: "COMPRAS",
+    },
+    {
+      CODGRUPO: "2",
+      CODNAT: "2020100",
+      DESCRNAT: "COMPRAS PARA REVENDA",
+      CODNATPAI: "2020000",
+      DESCRNATPAI: "COMPRAS",
+    },
+    {
+      CODGRUPO: "2",
+      CODNAT: "2020200",
+      DESCRNAT: "COMPRAS DE ATIVO IMOBILIZADO",
+      CODNATPAI: "2020000",
+      DESCRNATPAI: "COMPRAS",
+    },
+    {
+      CODGRUPO: "3",
+      CODNAT: "3020300",
+      DESCRNAT: "FÉRIAS E 13º SALÁRIO",
+      CODNATPAI: "3020000",
+      DESCRNATPAI: "DESPESAS COM PESSOAL",
+    },
+    {
+      CODGRUPO: "3",
+      CODNAT: "3020400",
+      DESCRNAT: "SALÁRIOS E ENCARGOS",
+      CODNATPAI: "3020000",
+      DESCRNATPAI: "DESPESAS COM PESSOAL",
+    },
+    {
+      CODGRUPO: "3",
+      CODNAT: "3020501",
+      DESCRNAT: "MARKETING",
+      CODNATPAI: "3020500",
+      DESCRNATPAI: "DESPESAS FINANCEIRAS",
+    },
+    {
+      CODGRUPO: "3",
+      CODNAT: "3020502",
+      DESCRNAT: "VIAGENS E DESLOCAMENTOS",
+      CODNATPAI: "3020500",
+      DESCRNATPAI: "DESPESAS FINANCEIRAS",
+    },
+    {
+      CODGRUPO: "4",
+      CODNAT: "4020400",
+      DESCRNAT: "IPI",
+      CODNATPAI: "4020000",
+      DESCRNATPAI: "IMPOSTOS",
+    },
+    {
+      CODGRUPO: "4",
+      CODNAT: "4020501",
+      DESCRNAT: "ICMS",
+      CODNATPAI: "4020500",
+      DESCRNATPAI: "IMPOSTOS",
+    },
+    {
+      CODGRUPO: "4",
+      CODNAT: "4020502",
+      DESCRNAT: "SUBSTITUIÇÃO TRIBUTÁRIA",
+      CODNATPAI: "4020500",
+      DESCRNATPAI: "IMPOSTOS",
+    },
+  ];
+}
