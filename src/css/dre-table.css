@@ -34,6 +34,38 @@
   border-spacing: 0 3px;
   white-space: nowrap;
 }
+
+.dre-group-table tbody tr[draggable="true"] {
+  cursor: grab;
+}
+
+.dre-group-table tbody tr[draggable="true"]:active {
+  cursor: grabbing;
+}
+
+/* Estilo da linha que está sendo segurada (arrastada) */
+.dre-group-table tbody tr.dragging td {
+  background-color: var(--accent-dim);
+  opacity: 0.8;
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+.dre-group-table tbody tr.dragging td:first-child {
+  border-left: 2px solid var(--primary);
+}
+.dre-group-table tbody tr.dragging td:last-child {
+  border-right: 2px solid var(--primary);
+}
+
+/* Indicadores visuais de onde a linha vai cair (Linha verde) */
+.dre-group-table tbody tr.drop-above td {
+  box-shadow: inset 0 3px 0 var(--primary); /* Linha verde no topo da célula */
+}
+
+.dre-group-table tbody tr.drop-below td {
+  box-shadow: inset 0 -3px 0 var(--primary); /* Linha verde na base da célula */
+}
+
 .dre-group-table thead th {
   padding: 6px 60px;
   font-size: 16px;
@@ -65,7 +97,6 @@
 
 .dre-group-table tbody tr:hover td {
   background: #f0faf0;
-  cursor: pointer;
 }
 
 .dre-group-table tbody td {
