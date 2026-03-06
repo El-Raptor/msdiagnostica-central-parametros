@@ -1,4 +1,4 @@
-import { fetchCategories } from "../model/categories.js";
+import { fetchDreCategories } from "../model/dre-categories.js";
 
 let currentGroup = null;
 
@@ -12,7 +12,7 @@ const COLS = [
 export async function renderCategoryTableSection(group) {
   currentGroup = group;
   const tableSection = document.querySelector(".table-section");
-  const categories = await fetchCategories(group.CODGRUPO);
+  const categories = await fetchDreCategories(group.CODGRUPO);
 
   console.log("Renderizando tabela para o grupo:", group);
   console.log("Categorias encontradas:", categories);

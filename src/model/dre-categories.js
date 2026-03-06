@@ -1,4 +1,4 @@
-export async function fetchCategories(codgrupo) {
+export async function fetchDreCategories(codgrupo) {
   const categoriesData = categories();
   return categoriesData.filter(
     (category) => parseInt(category.CODGRUPO) === parseInt(codgrupo),
