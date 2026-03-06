@@ -63,6 +63,7 @@
 }
 
 .calc-input {
+  position: relative;
   height: 100%;
   padding: 3px;
   border: 1px solid var(--border);
@@ -128,4 +129,55 @@
 .btn-save:hover {
     color: #66cc66;
     border: 1px solid #66cc66;
+}
+
+.dropdown-list {
+  display: none; /* Escondido por padrão */
+  position: absolute;
+  top: 100%; /* Fica exatamente abaixo do input */
+  left: 0;
+  width: 100%;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  max-height: 200px; /* Cria uma barra de rolagem se houver muitos itens */
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Classe acionada pelo JavaScript para mostrar a lista */
+.dropdown-list.show {
+  display: block;
+}
+
+.dropdown-list li {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 15px;
+  border-bottom: 1px solid var(--line-bg);
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-list li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-list li:hover {
+  background-color: var(--accent-dim);
+  color: var(--primary-dark);
+}
+
+.dropdown-list li.no-results {
+  color: var(--label);
+  cursor: default;
+  text-align: center;
+}
+.dropdown-list li.no-results:hover {
+  background-color: transparent;
+  color: var(--label);
 }
