@@ -26,6 +26,7 @@ body {
   Arial,
   sans-serif;
   width: 640px;
+  min-width: 600px;
   height: 100vh;
   background-color: var(--primary);
   display: flex;
